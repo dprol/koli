@@ -1,6 +1,189 @@
----
-layout: default
----
-<div class="content">
-    <p><span class="sys-name">The new capabilities of generative artificial intelligence tools Generative AI, such as ChatGPT, allow users to interact with the system in intuitive ways, such as simple conversations, and receive (mostly) good-quality answers. These systems can support students' learning objectives by providing accessible explanations and examples even with vague queries. At the same time, they can encourage undesired help-seeking behaviors by providing solutions to the students' homework. Therefore, it is important to better understand how students approach such tools and the potential issues such approaches might present for the learners. In this paper, we present a case study for understanding student-AI collaboration to solve programming tasks in the CS1 introductory programming course. To this end, we recruited a gender-balanced majority non-white set of 15 CS1 students at a large public university in the US. We observed them solving programming tasks. We used a mixed-method approach to study their interactions as they tackled Python programming tasks, focusing on when and why they used ChatGPT for problem-solving. We analyze and classify the questions submitted by the 15 participants to ChatGPT. Additionally, we analyzed user interaction patterns, their reactions to ChatGPT's responses, and the potential impacts of Generative AI on their perception of self-efficacy. Our results suggest that in about a third of the cases, the student attempted to complete the task by submitting the full description of the tasks to ChatGPT without making any effort on their own. We also observed that few students verified their solutions. We discuss the results and their potential implications.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-AI Interaction: A Case Study of CS1 students</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .authors-side {
+            flex: 2;
+        }
+        .buttons-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .authors-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .author-container {
+            width: 300px;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .author-container:hover {
+            transform: scale(1.05);
+        }
+        .author-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-name {
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+        .author-affiliation {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .author-website {
+            margin-top: 10px;
+        }
+        .author-website a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .author-website a:hover {
+            text-decoration: underline;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center p-5">
+        <h1>Student-AI Interaction</h1>
+        <h4>A Case Study of CS1 Students</h4>
+    </header>
+    <div class="container">
+        <div class="authors-side">
+            <div class="authors-wrapper">
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="amin-pic.png" alt="Amin Alipour">
+                    </div>
+                    <div class="author-name">Amin Alipour</div>
+                    <div class="author-affiliation">University of Houston</div>
+                    <div class="author-website">
+                        <a href="https://www.aminalipour.com/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="daniel-pic.png" alt="Daniel Prol">
+                    </div>
+                    <div class="author-name">Daniel Prol</div>
+                    <div class="author-affiliation">Universidad Internacional de La Rioja (UNIR)</div>
+                    <div class="author-website">
+                        <a href="https://dprol.github.io/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="ali-pic.png" alt="Ali Alfageeh">
+                    </div>
+                    <div class="author-name">Ali Alfageeh</div>
+                    <div class="author-affiliation">University of Houston</div>
+                    <div class="author-website">
+                        <a href="https://www.linkedin.com/in/ali-alfageeh-182755132/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="daye-pic.png" alt="Daye Nam">
+                    </div>
+                    <div class="author-name">Daye Nam</div>
+                    <div class="author-affiliation">Carnegie Mellon University</div>
+                    <div class="author-website">
+                        <a href="https://dayenam.com/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="sruti-pic.png" alt="Sruti S Ragavan">
+                    </div>
+                    <div class="author-name">Sruti S Ragavan</div>
+                    <div class="author-affiliation">Indian Institute of Technology Kanpur</div>
+                    <div class="author-website">
+                        <a href="https://sruti-s-ragavan.github.io/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="matin-pic.png" alt="Matin Amoozadeh">
+                    </div>
+                    <div class="author-name">Matin Amoozadeh</div>
+                    <div class="author-affiliation">University of Houston</div>
+                    <div class="author-website">
+                        <a href="https://www.matinamoozadeh.com/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="michael-pic.png" alt="Michael Hilton">
+                    </div>
+                    <div class="author-name">Michael Hilton</div>
+                    <div class="author-affiliation">Carnegie Mellon University</div>
+                    <div class="author-website">
+                        <a href="https://www.cs.cmu.edu/~mhilton/" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img src="james-pic.png" alt="James Prather">
+                    </div>
+                    <div class="author-name">James Prather</div>
+                    <div class="author-affiliation">Abilene Christian University</div>
+                    <div class="author-website">
+                        <a href="http://jamesprather.com/" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons-side">
+            <div class="buttons">
+                <a href="https://arxiv.org/abs/2407.00305" class="button" target="_blank">Paper</a>
+                <a href="slide.pdf" class="button" target="_blank">Slides</a>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>&copy; 2024 EvalLM | <a href="https://github.com/dprol" target="_blank" class="text-white">GitHub</a> | <a href="/contact" class="text-white">Contact</a></p>
+    </footer>
+</body>
+</html>
