@@ -1,0 +1,11 @@
+<div class="authors-wrapper">
+    {% for author in site.data.authors %}
+    <div class="author-container">
+        <div class="author-image">
+            <img src="{{ author.image | default: '/api/placeholder/100/100' }}" alt="{{ author.name }}">
+        </div>
+        <div class="author-name">{{ author.name }}</div>
+        <div class="author-affiliation">{{ author.affiliation }}</div>
+    </div>
+    {% endfor %}
+</div>
