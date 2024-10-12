@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
         .container {
             display: flex;
             justify-content: space-between;
             gap: 40px;
+            margin-top: 20px;
         }
         .authors-side {
             flex: 2;
@@ -27,22 +29,27 @@
             padding: 20px;
         }
         .author-container {
-            width: 200px;
+            width: 300px;
             text-align: center;
             background-color: #f0f0f0;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .author-container:hover {
+            transform: scale(1.05);
         }
         .author-image img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
         }
         .author-name {
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 1.2em;
         }
         .author-affiliation {
             font-style: italic;
@@ -71,6 +78,7 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
         .button:hover {
             background-color: #0056b3;
@@ -165,8 +173,8 @@
         </div>
         <div class="buttons-side">
             <div class="buttons">
-                <a href="paper.pdf" class="button" target="_blank">Paper</a>
-                <a href="slide.pdf" class="button" target="_blank">Slide</a>
+                <a href="https://arxiv.org/abs/2407.00305" class="button" target="_blank">Paper</a>
+                <a href="slide.pdf" class="button" target="_blank">Slides</a>
             </div>
         </div>
     </div>
