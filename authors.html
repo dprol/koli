@@ -1,11 +1,134 @@
-<div class="authors-wrapper">
-    {% for author in site.data.authors %}
-    <div class="author-container">
-        <div class="author-image">
-            <img src="{{ author.image | default: '/api/placeholder/100/100' }}" alt="{{ author.name }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+    <style>
+        .authors-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .author-container {
+            width: 200px;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .author-image img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .author-affiliation {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .author-website {
+            margin-top: 10px;
+        }
+        .author-website a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .author-website a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="authors-wrapper">
+        <div class="author-container">
+            <div class="author-image">
+                <img src="matin-pic.jpg" alt="Matin Amoozadeh">
+            </div>
+            <div class="author-name">Matin Amoozadeh</div>
+            <div class="author-affiliation">University of Houston</div>
+            <div class="author-website">
+                <a href="https://www.matinamoozadeh.com/" target="_blank">Website</a>
+            </div>
         </div>
-        <div class="author-name">{{ author.name }}</div>
-        <div class="author-affiliation">{{ author.affiliation }}</div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="daye-pic.jpg" alt="Daye Nam">
+            </div>
+            <div class="author-name">Daye Nam</div>
+            <div class="author-affiliation">Carnegie Mellon University</div>
+            <div class="author-website">
+                <a href="https://dayenam.com/" target="_blank">Website</a>
+            </div>
+        </div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="daniel-pic.jpg" alt="Daniel Prol">
+            </div>
+            <div class="author-name">Daniel Prol</div>
+            <div class="author-affiliation">Universidad Internacional de La Rioja (UNIR)</div>
+            <div class="author-website">
+                <a href="https://dprol.github.io/" target="_blank">Website</a>
+            </div>
+        </div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="ali-pic.jpg" alt="Ali Alfageeh">
+            </div>
+            <div class="author-name">Ali Alfageeh</div>
+            <div class="author-affiliation">University of Houston</div>
+            <div class="author-website">
+                <a href="https://www.linkedin.com/in/ali-alfageeh-182755132/" target="_blank">Website</a>
+            </div>
+        </div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="james-pic.jpg" alt="James Prather">
+            </div>
+            <div class="author-name">James Prather</div>
+            <div class="author-affiliation">Abilene Christian University</div>
+            <div class="author-website">
+                <a href="http://jamesprather.com/" target="_blank">Website</a>
+            </div>
+        </div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="michael-pic.jpg" alt="Michael Hilton">
+            </div>
+            <div class="author-name">Michael Hilton</div>
+            <div class="author-affiliation">Carnegie Mellon University</div>
+            <div class="author-website">
+                <a href="https://www.cs.cmu.edu/~mhilton/" target="_blank">Website</a>
+            </div>
+        </div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="sruti-pic.jpg" alt="Sruti S Ragavan">
+            </div>
+            <div class="author-name">Sruti S Ragavan</div>
+            <div class="author-affiliation">Indian Institute of Technology Kanpur</div>
+            <div class="author-website">
+                <a href="https://sruti-s-ragavan.github.io/" target="_blank">Website</a>
+            </div>
+        </div>
+        <div class="author-container">
+            <div class="author-image">
+                <img src="amin-pic.jpg" alt="Amin Alipour">
+            </div>
+            <div class="author-name">Amin Alipour</div>
+            <div class="author-affiliation">University of Houston</div>
+            <div class="author-website">
+                <a href="https://www.aminalipour.com/" target="_blank">Website</a>
+            </div>
+        </div>
     </div>
-    {% endfor %}
-</div>
+</body>
+</html>
